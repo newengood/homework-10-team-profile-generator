@@ -1,6 +1,14 @@
+// import inquirer and fs
 const inquirer = require('inquirer');
 const fs = require('fs');
+
+// import htl generator
 const generateHTML = require("./src/template")
+
+// import classes
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 // create staff array
 let staff = []
@@ -92,8 +100,8 @@ const addEmployee = () => {
             staff.push(intern);
         }
         // add additional employee if chosen
-        if (answers.addAdditionEmployee) {
-            addEmployee(staff);
+        if (answers.addAdditionalEmployee) {
+            addEmployee();
         // return completed staff if chosen
         } else {
             return staff;
