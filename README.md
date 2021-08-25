@@ -21,7 +21,7 @@
 
 ## Usage
 
-![usage](./assets/usage.gif)
+![usage](./images/usage.gif)
 
 ## License
   

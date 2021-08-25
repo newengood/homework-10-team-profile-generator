@@ -30,7 +30,7 @@ const generateEngineer = (answers) => {
           <ul class="list-group">
             <li class="list-group-item">ID: ${answers.id} </li>
             <li class="list-group-item">Email: <a href="mailto:${answers.email}"> ${answers.email}</a> </li>
-            <li class="list-group-item">Github: <a href="https://www.github.com/${answers.github}" target="_blank"> ${answers.github} </li>
+            <li class="list-group-item">Github: <a href="https://www.github.com/${answers.github}"target="_blank">${answers.github}<a/></li>
           </ul>
         </div>
       </div>
