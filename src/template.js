@@ -9,7 +9,7 @@ const generateManager = (answers) => {
           <h3>Title: Manager</h3>
           <ul class="list-group">
             <li class="list-group-item">ID: ${answers.id} </li>
-            <li class="list-group-item">Email: ${answers.email} </li>
+            <li class="list-group-item">Email: <a href="mailto:${answers.email}"> ${answers.email}</a></li>
             <li class="list-group-item">Office Number: ${answers.officeNumber} </li>
           </ul>
         </div>
@@ -29,8 +29,8 @@ const generateEngineer = (answers) => {
           <h3>Title: Engineer </h3>
           <ul class="list-group">
             <li class="list-group-item">ID: ${answers.id} </li>
-            <li class="list-group-item">Email: ${answers.email} </li>
-            <li class="list-group-item">Github: ${answers.github} </li>
+            <li class="list-group-item">Email: <a href="mailto:${answers.email}"> ${answers.email}</a> </li>
+            <li class="list-group-item">Github: <a href="https://www.github.com/${answers.github}" target="_blank"> ${answers.github} </li>
           </ul>
         </div>
       </div>
@@ -49,7 +49,7 @@ const generateIntern = (answers) => {
           <h3>Title: Intern </h3>
           <ul class="list-group">
             <li class="list-group-item">ID: ${answers.id} </li>
-            <li class="list-group-item">Email: ${answers.email} </li>
+            <li class="list-group-item">Email: <a href="mailto:${answers.email}"> ${answers.email}</a> </li>
             <li class="list-group-item">School: ${answers.school} </li>
           </ul>
         </div>
