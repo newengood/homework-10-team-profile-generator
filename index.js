@@ -2,8 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// import htl generator
-const generateHTML = require("./src/template")
+// import html generator
+const joinDivs = require("./src/template");
 
 // import classes
 const Manager = require("./lib/Manager");
@@ -84,7 +84,7 @@ const addEmployee = () => {
         {
         type: 'confirm',
         name: 'addAdditionalEmployee',
-        message: 'Add addition employee?',
+        message: 'Add additional employee?',
         },
     ])
     .then(answers => {
@@ -101,7 +101,7 @@ const addEmployee = () => {
         }
         // add additional employee if chosen
         if (answers.addAdditionalEmployee) {
-            addEmployee();
+            return addEmployee(staff);
         // return completed staff if chosen
         } else {
             return staff;
@@ -117,9 +117,12 @@ addManager()
 
 // create html
 .then((staff) => {
-    const htmlPageContent = generateHTML(staff);
+    const htmlPageContent = joinDivs(staff);
 
     fs.writeFile('./dist/index.html', htmlPageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created index.html!')
-    );
-  });
+    )
+  })
+  .catch((error) => {
+    console.error("There was a problem creating your index.html", error)
+})
