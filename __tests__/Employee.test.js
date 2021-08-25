@@ -1,6 +1,6 @@
-const Employee = require("..Employee/lib/Employee");
+const Employee = require("../lib/Employee");
 
-decribe("Employee", () => {
+describe("Employee", () => {
     describe("Object", () => {
         it("creates an Employee object", () => {
             const employee = new Employee ("test employee", 50, "test@gmail.com");
@@ -21,11 +21,11 @@ decribe("Employee", () => {
         it("returns the employee ID", () => {
             const employee = new Employee ("test employee", 50, "test@gmail.com");
 
-            expect(employee.getID()).toEqual(50);
+            expect(employee.getId()).toEqual(50);
         })
     })
-    describe("getID", () => {
-        it("returns the employee ID", () => {
+    describe("getEmail", () => {
+        it("returns the employee email", () => {
             const employee = new Employee ("test employee", 50, "test@gmail.com");
 
             expect(employee.getEmail()).toBe("test@gmail.com");
@@ -35,7 +35,7 @@ decribe("Employee", () => {
         it("returns the employee's role", () => {
             const employee = new Employee ("test employee", 50, "test@gmail.com");
 
-            expect(employee.getEmail()).toBe("employee");
+            expect(employee.getRole()).toBe("employee");
         })
     })
 })

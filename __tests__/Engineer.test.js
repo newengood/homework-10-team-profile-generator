@@ -1,6 +1,6 @@
-const Engineer = require("..Employee/lib/Engineer");
+const Engineer = require("../lib/Engineer");
 
-decribe("Engineer", () => {
+describe("Engineer", () => {
     describe("Object", () => {
         it("creates an Engineer object", () => {
             const engineer = new Engineer ("test employee", 50, "test@gmail.com", "github");

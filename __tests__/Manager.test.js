@@ -1,6 +1,6 @@
-const Manager = require("..Employee/lib/Manager");
+const Manager = require("../lib/Manager");
 
-decribe("Manager", () => {
+describe("Manager", () => {
     describe("Object", () => {
         it("creates an Manager object", () => {
             const manager = new Manager ("test employee", 50, "test@gmail.com", 500);
